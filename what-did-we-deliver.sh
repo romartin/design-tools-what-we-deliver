@@ -2,14 +2,15 @@
 what-did-we-deliver-here() {
 
   # SHHH! zsh 
-  setopt localoptions rmstarsilent
+  # setopt localoptions rmstarsilent
 
-  echo "=> $1"
-  cd "/Users/karreiro/Projects/forks/$1"
+  # echo "=> $1"
+  cd "$1"
   git checkout what-did-we-deliver > /dev/null 2>&1
   git fetch upstream > /dev/null 2>&1
   git reset upstream/master --hard > /dev/null 2>&1
   git log --pretty=format:"%an (%ar): %s" --after="$2" --until="$3" --author="David|Alex|Myriam|Guilherme Car|Daniel |Handrey|Jaime|Kirill|Roger|Toni|Valentino|Wagner|Yeser|Dominik|Jan|Jozef|Lubomir|Liz|Heena|Stetson"
+  cd ..
 }
 
 what-did-we-deliver() {
@@ -30,3 +31,5 @@ what-did-we-deliver() {
   what-did-we-deliver-here "lienzo-core" "$1" "$2"
   what-did-we-deliver-here "lienzo-tests" "$1" "$2"
 }
+
+what-did-we-deliver "$1" "$2"
