@@ -4,7 +4,7 @@ git clone https://github.com/kiegroup/drools-wb.git
 git clone https://github.com/kiegroup/droolsjbpm-build-bootstrap.git
 git clone https://github.com/kiegroup/droolsjbpm-integration.git
 git clone https://github.com/kiegroup/droolsjbpm-knowledge.git
-https://github.com/errai/errai.git
+git clone https://github.com/errai/errai.git
 git clone https://github.com/kiegroup/gwt-jsonix-schema-compiler.git
 git clone https://github.com/kiegroup/jbpm-wb.git
 git clone https://github.com/kiegroup/kie-docs.git
